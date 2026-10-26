@@ -105,6 +105,18 @@ function page_head(string $title): void { ?>
 <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
 <?php }
 
+// Polaroid photo collage. $photos = [[file, caption], ...] (up to 6; the 2nd one is landscape)
+function render_collage(array $photos): void { ?>
+<div class="collage" aria-hidden="true">
+  <?php foreach ($photos as $i => [$file, $caption]): ?>
+    <figure class="polaroid p<?= $i + 1 ?>">
+      <img src="photos/<?= h($file) ?>" alt="" loading="eager">
+      <figcaption><?= h($caption) ?></figcaption>
+    </figure>
+  <?php endforeach; ?>
+</div>
+<?php }
+
 function page_foot(): void { ?>
 <footer>yes I made this website. Sana naman ma appreciate mo ginawa ko dito hahahaha</footer>
 </body>

@@ -10,15 +10,8 @@ $photos = [
     ['photo5.jpg', '😘'],
     ['photo3.jpg', 'palakihan ng noo'],
 ];
+render_collage($photos);
 ?>
-<div class="collage" aria-hidden="true">
-  <?php foreach ($photos as $i => [$file, $caption]): ?>
-    <figure class="polaroid p<?= $i + 1 ?>">
-      <img src="photos/<?= h($file) ?>" alt="" loading="eager">
-      <figcaption><?= h($caption) ?></figcaption>
-    </figure>
-  <?php endforeach; ?>
-</div>
 <main class="home">
   <p class="eyebrow">A very important question</p>
   <h1>Vee, will you go on a <em>date</em><br>with <?= h(ASKER_NAME) ?>?</h1>

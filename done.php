@@ -58,6 +58,14 @@ if (!$b) {
 $when = new DateTimeImmutable($b['date'] . ' ' . $b['time']);
 
 page_head("It's a date!");
+render_collage([
+    ['photo7.jpg',  'night out ✨'],
+    ['photo8.jpg',  'lazy mornings'],
+    ['photo9.jpg',  'pout check'],
+    ['photo10.jpg', 'pretty in pink'],
+    ['photo11.jpg', 'car selfie 😛'],
+    ['photo12.jpg', 'that smile'],
+]);
 ?>
 <main class="done">
   <div class="big-emoji">💌</div>

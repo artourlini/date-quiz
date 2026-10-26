@@ -148,7 +148,7 @@ footer { position: relative; z-index: 1; text-align: center; font-size: 11px; co
   .collage { position: absolute; }
   .polaroid { width: clamp(92px, 14vw, 140px); }
   .p2, .p5 { display: none; }
-  .home { padding-top: 215px; padding-bottom: 230px; }
+  .home, .done { padding-top: 215px; padding-bottom: 230px; }
   .p1 { top: 14px; left: 14px; }
   .p4 { top: 24px; right: 14px; }
   .p3 { bottom: 62px; left: 18px; }
@@ -158,5 +158,5 @@ footer { position: relative; z-index: 1; text-align: center; font-size: 11px; co
   .polaroid { width: 92px; padding: 5px 5px 0; }
   .polaroid figcaption { font-size: .85rem; padding: 2px 0 3px; }
   .polaroid::before { width: 36px; height: 14px; top: -7px; }
-  .home { padding-top: 165px; padding-bottom: 190px; }
+  .home, .done { padding-top: 165px; padding-bottom: 190px; }
 }
