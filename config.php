@@ -60,7 +60,8 @@ function fmt_time(string $hm): string { return date('g:i A', strtotime($hm)); }
 
 // Send a push notification to your phone via ntfy.sh (never blocks the page for long)
 function notify(string $title, string $message, string $tags = 'purple_heart'): void {
-    if (NTFY_TOPIC === '') return;
+    // Skip when testing locally with `php -S`, so only the live site sends pushes
+    if (NTFY_TOPIC === '' || PHP_SAPI === 'cli-server') return;
     @file_get_contents('https://ntfy.sh/' . NTFY_TOPIC, false, stream_context_create(['http' => [
         'method'  => 'POST',
         'header'  => "Title: $title\r\nTags: $tags\r\nPriority: high\r\nContent-Type: text/plain; charset=utf-8",

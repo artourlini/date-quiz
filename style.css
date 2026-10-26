@@ -11,6 +11,7 @@
 * { box-sizing: border-box; }
 
 html, body { margin: 0; min-height: 100%; }
+html { overflow-x: clip; }
 
 body {
   font-family: Inter, system-ui, sans-serif;
@@ -61,7 +62,8 @@ h1 em { color: var(--accent); font-style: italic; }
 .label { font-size: 11px; letter-spacing: .25em; text-transform: uppercase; font-weight: 600; margin: 32px 0 12px; }
 
 .days { display: flex; gap: 10px; overflow-x: auto; padding-bottom: 10px; scrollbar-width: thin; }
-.choice input { position: absolute; opacity: 0; pointer-events: none; }
+.choice { position: relative; flex-shrink: 0; }
+.choice input { position: absolute; inset: 0; opacity: 0; pointer-events: none; }
 .choice > span {
   display: block; background: var(--card); border: 1px solid var(--card-border); border-radius: 16px;
   cursor: pointer; transition: transform .15s, background .15s, border-color .15s; backdrop-filter: blur(6px);
